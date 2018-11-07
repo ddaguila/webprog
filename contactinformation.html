@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Contact Information</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {font-family: "Lato", sans-serif;}
+
+.tablink {
+    background-color: #555;
+    color: white;
+    float: center;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 70px 16px;
+    font-size: 17px;
+    width: 25%;
+}
+
+.tablink:hover {
+    background-color: #777;
+}
+
+/* Style the tab content */
+.tabcontent {
+    color: white;
+    display: none;
+	float: center;
+    padding: 100px;
+    text-align: center;
+}
+
+#Contact Information {background-color:BurlyWood ;}
+#Social Media {background-color:BurlyWood ;}
+#Personal Information  {background-color:BurlyWood ;}
+</style>
+</head>
+<body>
+
+<h2><a href="index.html">Home</a></h2>
+
+<div id="Contact Information " class="tabcontent">
+<body background="light.jpg" height="100%" width="200%">
+  <h3>Contact Number</h3>
+  <p>SMART 09281934406</p>
+</div>
+
+<div id="Social Media" class="tabcontent">
+<body background="light.jpg" height="100%" width="200%">
+  <h3>Social Media</h3>
+  <p>Facebook: danielaguila85@yahoo.com</p> 
+  <p>Instagram: aguila.dandan</p>
+  <p>Twitter: dandanpoha</p>
+  <p>Yahoomail: danielaguila85@yahoo.com</p>  
+</div>
+
+<div id="Personal Information " class="tabcontent">
+<body background="light.jpg" height="100%" width="200%">
+  <h3>Personal Information</h3>
+  <p>Name: Daniel Daguia Aguila</p>
+  <p>Course: Bachelor of Science Information Technology</p>
+  <p>Address: blk.1 lot.13 Grace Street Sunnyvale3 Pantok Binangonan,Rizal  </p>
+  <p>Birthday: September 8,1992</p>
+  <p>Age: 26</p>
+  <p>Gender: Male</p>
+  <br>
+  <p>Mothers Name: Estrelita Aguila</p>
+  <p>Occupation: House Wife</p>
+  <p>Fathers Name: Danilo Aguila</P>
+  <p>Occupation: Employee</p>
+</div>
+
+
+<button class="tablink" onclick="openPage('Contact Information ', this, 'BurlyWood ')" id="defaultOpen">Contact Information </button>
+<button class="tablink" onclick="openPage('Social Media', this, 'BurlyWood ')">Social Media</button>
+<button class="tablink" onclick="openPage('Personal Information ', this, 'BurlyWood ')">Personal Information </button>
+
+<script>
+function openPage(pageName,elmnt,color) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablink");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].style.backgroundColor = "";
+    }
+    document.getElementById(pageName).style.display = "block";
+    elmnt.style.backgroundColor = color;
+
+}
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+     
+</body>
+</html> 
